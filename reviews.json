@@ -1,0 +1,125 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emily Watson",
+        "subject": "Computer Science",
+        "stars": 5,
+        "review": "Dr. Watson's lectures are engaging and insightful. She makes complex topics easy to understand."
+      },
+      {
+        "professor": "Dr. James Miller",
+        "subject": "Mathematics",
+        "stars": 4,
+        "review": "Great at explaining concepts, but sometimes the pace is a bit fast. Overall, very knowledgeable."
+      },
+      {
+        "professor": "Dr. Olivia Rodriguez",
+        "subject": "Physics",
+        "stars": 5,
+        "review": "Dr. Rodriguez is an excellent professor. Her enthusiasm for physics is contagious!"
+      },
+      {
+        "professor": "Dr. Michael Lee",
+        "subject": "Chemistry",
+        "stars": 3,
+        "review": "Dr. Lee knows his stuff, but his lectures can be a bit dry. More interactive sessions would help."
+      },
+      {
+        "professor": "Dr. Sarah Johnson",
+        "subject": "Biology",
+        "stars": 5,
+        "review": "Dr. Johnson is amazing! She makes the subject very interesting and is always willing to help."
+      },
+      {
+        "professor": "Dr. William Brown",
+        "subject": "History",
+        "stars": 4,
+        "review": "His lectures are detailed and informative. Sometimes goes off-topic, but overall very good."
+      },
+      {
+        "professor": "Dr. Ava Davis",
+        "subject": "Psychology",
+        "stars": 5,
+        "review": "One of the best professors I’ve had. Her classes are both challenging and rewarding."
+      },
+      {
+        "professor": "Dr. Henry Wilson",
+        "subject": "Economics",
+        "stars": 4,
+        "review": "Dr. Wilson is great at connecting theory to real-world examples. Could use more diverse teaching methods."
+      },
+      {
+        "professor": "Dr. Sophia Martinez",
+        "subject": "Literature",
+        "stars": 5,
+        "review": "Dr. Martinez is passionate about literature and it shows in her teaching. Highly recommend her classes."
+      },
+      {
+        "professor": "Dr. John Taylor",
+        "subject": "Philosophy",
+        "stars": 3,
+        "review": "Interesting material, but Dr. Taylor's lectures can be a bit monotonous. Needs more interaction."
+      },
+      {
+        "professor": "Dr. Mia Anderson",
+        "subject": "Sociology",
+        "stars": 5,
+        "review": "Her lectures are thought-provoking and she encourages deep discussion. Excellent professor."
+      },
+      {
+        "professor": "Dr. Daniel Thomas",
+        "subject": "Political Science",
+        "stars": 4,
+        "review": "Dr. Thomas is well-versed in his field. Lectures are informative, but sometimes a bit too theoretical."
+      },
+      {
+        "professor": "Dr. Emma White",
+        "subject": "Environmental Science",
+        "stars": 5,
+        "review": "Dr. White is an amazing professor who genuinely cares about the environment and her students."
+      },
+      {
+        "professor": "Dr. Alexander Harris",
+        "subject": "Art History",
+        "stars": 3,
+        "review": "Dr. Harris knows his art, but his lectures could be more engaging. Needs more visuals."
+      },
+      {
+        "professor": "Dr. Charlotte Clark",
+        "subject": "Music Theory",
+        "stars": 5,
+        "review": "Dr. Clark's classes are a joy to attend. She makes music theory accessible and fun."
+      },
+      {
+        "professor": "Dr. David Lewis",
+        "subject": "Statistics",
+        "stars": 4,
+        "review": "Great at explaining difficult concepts, but sometimes rushes through the material."
+      },
+      {
+        "professor": "Dr. Isabella Young",
+        "subject": "Anthropology",
+        "stars": 5,
+        "review": "Dr. Young's classes are incredibly engaging. She has a wealth of knowledge and shares it generously."
+      },
+      {
+        "professor": "Dr. Matthew Allen",
+        "subject": "Engineering",
+        "stars": 4,
+        "review": "Very knowledgeable in his field, but his lectures could use more practical examples."
+      },
+      {
+        "professor": "Dr. Amelia King",
+        "subject": "Business Administration",
+        "stars": 5,
+        "review": "Dr. King is an outstanding professor. Her real-world experience adds immense value to her classes."
+      },
+      {
+        "professor": "Dr. Benjamin Scott",
+        "subject": "Law",
+        "stars": 4,
+        "review": "Dr. Scott's classes are challenging but rewarding. Sometimes the workload can be heavy."
+      }
+    ]
+  }
+  
