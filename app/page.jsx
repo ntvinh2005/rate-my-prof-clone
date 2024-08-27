@@ -1,25 +1,21 @@
 'use client'
-import { useState, useEffect } from 'react';
-
-interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-}
+import { useState } from 'react';
+import Link from 'next/link';
+import { db } from '../firebase/clientApp';
 
 export default function Home() {
-  const [message, setMessage] = useState<string>('');
-  const [messages, setMessages] = useState<Message[]>([
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([
     { role: 'assistant', content: "Hello, I'm Rate My Professor assistant. How can I help you?" }
   ]);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSendMessage = async () => {
     if (!message.trim()) return;
 
-    const userMessage: Message = { role: 'user', content: message };
+    const userMessage = { role: 'user', content: message };
 
-    // Add the user's message and an empty placeholder for the assistant's reply
     setMessages((prevMessages) => [
       ...prevMessages,
       userMessage,
@@ -28,7 +24,7 @@ export default function Home() {
 
     setMessage('');
     setLoading(true);
-    setError(null); // Clear any previous errors
+    setError(null);
 
     try {
       const response = await fetch('/api/chat', {
@@ -48,20 +44,18 @@ export default function Home() {
 
       const data = await response.json();
 
-      // Ensure data structure matches expected response
       if (!data.choices || !data.choices[0] || !data.choices[0].message || typeof data.choices[0].message.content !== 'string') {
         throw new Error('Unexpected response format');
       }
 
-      const assistantMessage: Message = { role: 'assistant', content: data.choices[0].message.content };
+      const assistantMessage = { role: 'assistant', content: data.choices[0].message.content };
 
-      // Replace the placeholder with the assistant's response
       setMessages((prevMessages) => [
         ...prevMessages.slice(0, -1), // Remove the loading placeholder
         assistantMessage
       ]);
 
-    } catch (error: any) {
+    } catch (error) {
       console.error('Error in handleSendMessage:', error);
       setError('Failed to send message. Please try again later.');
     } finally {
@@ -71,16 +65,25 @@ export default function Home() {
 
   return (
     <div className="p-4">
+      {/* Add Recommendation Button */}
+      <Link href="/add-recommendation" className="block w-full mb-4">
+        <button className="w-full p-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors">
+          Add Recommendation
+        </button>
+      </Link>
+
+      {/* Chat interface */}
       <div className="mb-4">
         {messages.map((msg, index) => (
           <div
             key={index}
-            className={`mb-2 p-2 rounded-lg ${msg.role === 'user' ? 'bg-blue-100 text-black' : 'bg-gray-100 text-black'}`}
+            className={`mb-2 p-2 rounded-lg ${msg.role === 'user' ? 'bg-blue-100 text-black' : 'bg-violet-200 text-black'}`}
           >
             <strong className="font-bold text-black">{msg.role === 'user' ? 'You: ' : 'Assistant: '}</strong>
             <span className="text-black">{msg.content}</span>
           </div>
         ))}
+
       </div>
       <textarea
         value={message}
@@ -99,5 +102,8 @@ export default function Home() {
       </button>
       {error && <p className="text-red-500 mt-2">{error}</p>}
     </div>
+
+        
+
   );
 }
